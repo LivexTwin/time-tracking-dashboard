@@ -4,17 +4,17 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 .wrapper {
   width: min(88%, 75rem);
-  margin-inline: auto; /* Center the wrapper */
+  margin-inline: auto;
 }
 
 footer {
   padding-block-start: 2rem;
   padding-block-end: 0.5rem;
   text-align: center;
+  font-size: var(--fs-xs);
 }
 
 .attribution a {
@@ -37,7 +37,7 @@ footer {
   font-size: clamp(0.75rem, calc(1rem + 1vw), 2rem);
   text-align: center;
 
-  padding-block: clamp(1.5rem, calc(1.5rem + 3vw), 5rem);
+  padding-block: clamp(1.5rem, calc(1.5rem + 4vw), 6rem);
 }
 .greeting__name {
   color: var(--clr-neutral-paleBlue);
@@ -82,22 +82,6 @@ footer {
 @media (max-width: 768px) {
   .grid__item--previous {
     justify-self: flex-end;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid__item--data {
-    grid-template-areas:
-      "current options"
-      "previous previous";
-  }
-
-  .grid__item--previous {
-    justify-self: flex-start;
-  }
-
-  .grid__item--current p {
-    font-size: var(--fs-4xl);
   }
 }
 
@@ -148,12 +132,6 @@ footer {
   padding-bottom: clamp(0.5rem, 1vw + 0.1rem, 1rem);
 }
 
-@media (min-width: 1200px) {
-  .grid__item--current p {
-    font-size: var(--fs-3xl);
-  }
-}
-
 .grid__item--previous p {
   color: var(--clr-neutral-paleBlue);
   font-size: var(--fs-sm);
@@ -163,6 +141,27 @@ footer {
   opacity: 0.8;
   transition: opacity 0.5s ease;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .grid__item--data {
+    grid-template-areas:
+      "current options"
+      "previous previous";
+  }
+
+  .grid__item--previous {
+    justify-self: flex-start;
+  }
+
+  .grid__item--current p {
+    font-size: var(--fs-4xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid__item--current p {
+    font-size: 2.8rem;
+  }
 }
 
 /* grid end */
@@ -219,11 +218,11 @@ footer {
   .profile__info {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: clamp(1.5rem, 2vw + 1rem, 2.5rem);
   }
 
   .profile__name {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-4xl);
   }
 
   .profile__body {
@@ -233,7 +232,7 @@ footer {
 
   /* stack name on larger screens */
   .profile__name {
-    max-width: 100px;
+    max-width: 125px;
     margin-bottom: 3rem;
   }
 }
