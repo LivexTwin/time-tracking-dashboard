@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Lilburn",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "GA",
+				"name": "Georgia"
+			},
+			"timezone": "America/New_York",
+			"latitude": 33.8656,
+			"longitude": -84.0725,
+			"postalCode": "30047"
+		},
+		"timestamp": 1741981738729
+	}
+}

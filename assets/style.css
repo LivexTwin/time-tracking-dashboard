@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:focus,
+a:focus {
+  color: var(--clr-primary-blue); /* or another color that stands out */
+}
+
+/* custom properties */
+:root {
+  /* colors */
+  --clr-primary-blue: hsl(246, 80%, 60%);
+
+  --clr-primary-softRed: hsl(15, 100%, 70%);
+  --clr-primary-softBlue: hsl(195, 74%, 62%);
+  --clr-primary-lightRed: hsl(348, 100%, 68%);
+  --clr-primary-limeGreen: hsl(145, 58%, 55%);
+  --clr-primary-violet: hsl(264, 64%, 52%);
+  --clr-primary-softOrange: hsl(43, 84%, 65%);
+
+  /* neutral */
+  --clr-neutral-veryDarkBlue: hsl(226, 43%, 10%);
+  --clr-neutral-darkBlue: hsl(235, 46%, 20%);
+  --clr-neutral-grayishBlue: hsl(235, 45%, 61%);
+  --clr-neutral-paleBlue: hsl(236, 100%, 87%);
+
+  /* base */
+  --clr-base: hsl(0 0% 98%);
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 2.25rem;
+
+  /* weights */
+  --fw-regular: 300;
+  --fw-medium: 400;
+  --fw-bold: 500;
+
+  /* br */
+  --br: 1rem;
+}
+
+html {
+  font-family: "Rubik", sans-serif, Arial, sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-base);
+  font-display: swap;
+}
